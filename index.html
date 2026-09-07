@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a2a5e">
+<title>L D Modern Education Academy | Ultimate Cloud ERP</title>
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<section id="setup" class="auth hidden"><div class="auth-card">
+<div class="crest">LD</div><h1>Cloud Setup</h1>
+<p>Supabase Project URL और Publishable/Anon Key डालें।</p>
+<form id="setupForm" class="stack"><input id="url" placeholder="Supabase Project URL" required><input id="key" placeholder="Publishable / Anon Key" required><button>Connect Cloud</button></form>
+<small>पहले ZIP की <b>supabase-schema.sql</b> file SQL Editor में Run करें।</small>
+</div></section>
+
+<section id="login" class="auth hidden"><div class="auth-card">
+<div class="crest">LD</div><h1>L D MODERN EDUCATION ACADEMY</h1><p>Secure School ERP Portal</p>
+<form id="loginForm" class="stack"><input id="email" type="email" placeholder="Email" required><input id="password" type="password" placeholder="Password" required><button>Login</button></form>
+<div class="auth-links"><button id="signupShow" class="link">Create Account</button><button id="changeCloud" class="link redtext">Cloud Setup</button></div>
+</div></section>
+
+<section id="signup" class="auth hidden"><div class="auth-card">
+<div class="crest">LD</div><h1>Create User Account</h1>
+<p>पहला account अपने-आप Super Admin बनेगा। बाद के accounts को Admin role assign करेगा।</p>
+<form id="signupForm" class="stack"><input id="sname" placeholder="Full Name" required><input id="semail" type="email" placeholder="Email" required><input id="spass" type="password" minlength="6" placeholder="Password (minimum 6)" required><button>Create Account</button></form>
+<button id="back" class="link">← Back to Login</button>
+</div></section>
+
+<div id="app" class="app hidden">
+<aside id="side" class="side">
+<div class="brand"><div class="brand-logo">LD</div><div><b>L D MODERN</b><span>Education Academy</span></div></div>
+<div id="roleBadge" class="role-badge">USER</div>
+<nav id="nav"></nav>
+<div class="side-bottom"><button id="logout">⇥ Logout</button></div>
+</aside>
+<main class="main">
+<header class="top"><div class="top-left"><button id="menu" class="icon">☰</button><div><h2 id="title">Dashboard</h2><p id="subtitle"></p></div></div>
+<div class="top-right"><span class="cloud">● CLOUD</span><button id="addTop" class="primary">+ Add New</button></div></header>
+<section id="content" class="content"></section>
+</main>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle">Add New</h3><button id="close" class="icon">✕</button></div><form id="form" class="form-grid"></form></div></div>
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script>
+</body></html>

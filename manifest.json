@@ -1,0 +1,9 @@
+{
+  "name": "LD Modern Education Academy Ultimate ERP",
+  "short_name": "LD School ERP",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0a2a5e",
+  "icons": []
+}
